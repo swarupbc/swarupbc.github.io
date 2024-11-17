@@ -1,0 +1,147 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    color: #333;
+    font-size: 14px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.contact-info {
+    color: #666;
+    margin: 8px 0;
+    font-size: 13px;
+}
+
+.section {
+    margin: 18px 0;
+}
+
+.section-title {
+    color: #2c3e50;
+    border-bottom: 1.5px solid #3498db;
+    padding-bottom: 3px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.experience-item {
+    margin-bottom: 12px;
+}
+
+.job-title {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.company-date {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.job-description {
+    font-size: 13px;
+    text-align: justify;
+    margin: 5px 0;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skill-item {
+    background: #f7f9fc;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.education-item {
+    margin-bottom: 8px;
+}
+
+.two-column {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.column {
+    flex: 1;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-info a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.interest-item {
+    background: #f0f4f8;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #456;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 10px;
+    }
+
+    header,
+    .header-date,
+    .header-time {
+        display: none;
+    }
+
+    @page {
+        margin: 2cm;
+
+        /* Adding page numbers in the footer */
+        @bottom-center {
+            content: counter(page) "/" counter(pages);
+        }
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+}
